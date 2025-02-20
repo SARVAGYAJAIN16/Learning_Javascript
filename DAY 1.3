@@ -1,0 +1,84 @@
+Understand about the datatype , parseInt , parseFloat, NaN , typeof , Concatenation in Javascript.
+ --->
+ Data types define the type of values that a variable can hold.
+
+ Types of Primitive Data types:-
+
+ Number: Represents numeric values, including integers and floating-point numbers.
+
+ String: Represents a sequence of characters enclosed in single or double quotes.
+
+ Boolean: Represents a logical entity with two values: true or false.
+
+ undefined: Represents the absence of a value or an uninitialized variable.
+
+ Null: Represents the absence of a value. It is often used to explicitly indicate that      a variable or object property has no assigned value.
+
+ BigInt: Represents integers of arbitrary precision (available since ECMAScript 2020).
+ const bigNumber = 1234567890123456789012345678901234567890n;
+
+ Symbol: Represents a unique and immutable data type, often used to create unique identifiers.Example: const mySymbol = Symbol("description");
+
+ ========== parseInt & parseFloat Section ==========
+ parseInt and parseFloat are both functions in JavaScript used for converting strings to numbers, but they have different use cases.
+
+ parseInt: Definition: parseInt is used to parse a string and convert it to an integer (whole number).
+// const myString = "42";
+// const myNumber = parseInt(myString, 10);
+// console.log(myNumber); // Output: 42
+
+// const myString = "42.5";
+// const myNumber = parseInt(myString);
+// console.log(myNumber); // Output: 42
+
+ parseFloat: Definition: parseFloat is used to parse a string and convert it to a floating-point number (decimal number).
+// const myString = "42.5";
+// const myNumber = parseFloat(myString);
+// console.log(myNumber); // Output: 42.5
+
+-----> What is the purpose of the NaN value in JavaScript.
+Ans NaN is a (not a number) and is return when a mathematical operation does not yield  a valid number.
+// also to check whether a value is number or not we can use NaN() function.
+
+------>    
+ Concatenation in JavaScript
+ In JavaScript, the + sign is not only used for arithmetic addition but also for string concatenation. When the + operator is used with strings, it concatenates the strings together.
+ It's important to note that if any operand of the + operator is a string, JavaScript will treat the other operands as strings as well, resulting in string concatenation.
+ If both operands are numbers, the + operator performs numeric addition.
+
+ const str = "Hello" + "World";
+ console.log(str);
+
+ Type coercion is the automatic conversion of "values" from one data type to another.
+ It is a fundamental part of JavaScript and can be used to make code more readable and efficient.
+ There are two types of coercion in JavaScript: implicit and explicit. Implicit coercion happens automatically, while explicit coercion is done manually by the programmer.
+ 
+code-------------------------------------------------------------Javascript--------------------------------------------------------------------------------
+// number datatype 
+var myage = 30;
+console.log(myage);
+//string
+var myname ='sarvagya jain';
+var myname ="sarvagya jain";
+console.log(myname);
+//boolean
+var is_rain = false;
+console.log(is_rain);
+var areYouAwesome = true;
+console.log(areYouAwesome);
+//undefined
+var sarvagya;      // you made a variable but it is not defined or undefined. so output will be undefined. means we dont know what is that.
+console.log(sarvagya);
+// Null
+var bad_memories ="null";     // here you have given null (it is defined to null)
+console.log(bad_memories);
+// type of opertor
+var Name ="xyz";
+console.log(typeof Name); // output string
+var Name ="1";
+console.log(typeof Name);  //output string 
+var Name =1;
+console.log(typeof Name); //output number
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
