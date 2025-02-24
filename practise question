@@ -1,0 +1,35 @@
+question 1:-  JavaScript Program to Print the Fibonacci Series.
+------>
+let numberOfTerms = 7;
+printFibonacciSeries(numberOfTerms);
+
+function printFibonacciSeries(n) {
+    let n1 = 0, n2 = 1, nextTerm;
+
+    console.log('Fibonacci Series:');
+    for (let i = 1; i <= n; i++) {
+        console.log(n1);
+        nextTerm = n1 + n2;
+        n1 = n2;
+        n2 = nextTerm;
+    }
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ question 2 // JavaScript Program to Find the Factorial of a Number.
+------->
+
+let inputNumber = 5;
+let result = factorial(inputNumber);
+console.log(`The factorial of ${inputNumber} is: ${result}`);
+
+function factorial(n) {
+    if (n === 0 || n === 1) {
+        return 1;
+    }
+    let result = 1;
+    for (let i = 2; i <= n; i++) {
+        result *= i;
+    }
+    return result;
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
