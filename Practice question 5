@@ -1,0 +1,20 @@
+// question 1  Program to convert days into years in javascript.
+
+let num = 700;
+let year = parseInt(num/365);
+let month = parseInt((num%365)/30);
+let day = parseInt((num%365)%30);
+
+console.log(year);
+console.log(month);
+console.log(day);
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+question 2  program to display the sum of natural numbers.
+
+const number = parseInt(prompt('Enter a positive integer: '));
+let sum = 0;
+for (let i = 1; i <= number; i++) {
+    sum += i;
+}
+console.log('The sum of natural numbers:', sum);
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
