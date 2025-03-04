@@ -1,0 +1,65 @@
+Understand about loops and array traversal in javascript (part-1)
+---->           
+                1 for-of loop
+                2 for-in loop
+                3 for each 
+                4 map function.
+              
+ Array Traversal / Iterating Over Arrays
+ 1: for of loop , also known as iterable
+ for...of Loop: The for...of loop is used to iterate over the values of an iterable object, such as arrays, strings, or other iterable objects.
+
+ 2: for in loop
+ for...in Loop: The for...in loop is used to iterate over the properties (including indices) of an object.
+
+ 3: forEach Method
+ The arr.forEach() method calls the provided function once for each element of the array. The provided function may perform any kind of operation on the elements of the given array.
+
+ 4: map function
+ map() creates a new array from calling a function for every array element. map() does not change the original array.
+
+ code:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ //creating array using constructor.
+// let fruit = new Array("apple","orange","mango");
+//console.log(fruit);
+// creating array 
+let fruit= ("apple","orange","mango");
+console.log(fruit);
+let fruits= ["apple","orange","mango"];
+console.log(fruits);
+// empty array
+let arr = [];
+console.log(typeof arr);
+// modify element 
+let arr1 =["mango ","apple","orange"];
+arr1[2]="banana";
+console.log(arr1);
+
+// array traversal / Iterating over array
+// for-of loop
+let arr2=["mango","apple","orange","banana","chiku"];
+// for (let items of arr2)
+// {
+//     console.log(items);
+// }
+// for - in loop 
+// for(let items in arr2)
+// {
+//     console.log(items);
+// }
+// for each loop
+// arr2.forEach((currelement,index,array) => {
+//     console.log(`${currelement} ${index}`); // 
+// });
+// map function
+arr2.map((currelement,index,array) => {
+     console.log(`${currelement} ${index}`);
+});
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+                
