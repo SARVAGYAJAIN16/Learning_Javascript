@@ -1,0 +1,48 @@
+Explore the difference between map vs forEach and solve a practice question on that.
+code:----
+let arr2=["mango","apple","orange","banana","chiku"];
+// map vs forEach 
+//  const myforEacharr =arr2.forEach((currelem,index,arr) => {
+//           return `${currelem} ${index}`;
+//  });
+//  console.log(myforEacharr);
+
+ // output undefined.......................................
+
+ //forEach
+ const myMapArr =arr2.map((currelem,index,arr) => {
+     return  `my fav fruit is ${currelem} ${index}`;
+});
+console.log(myMapArr); // made some modify in array.
+console.log(arr2); // original array
+
+// output--->     [ 'mango 0', 'apple 1', 'orange 2', 'banana 3', 'chiku 4' ]
+------------------------------------------------------------------------------------------------------------------------------
+
+Practice que on map vs forEach.
+code----------------------------------------------------------------------------------
+/ write a program to Multiply each element with 2
+// const numbers = [1, 2, 3, 4, 5];
+// forEach -  Performs an action on each element
+// map -  Creates a new array with transformed elements
+
+// forEach
+// const number=[1,2,3,4,5];
+// number.forEach((currElement,index,arr) => {
+//            console.log(currElement*2);
+// });
+
+//map 
+
+const numbers=[1,2,3,4,5];
+const store = numbers.map((currElement) => {
+ //   return `multiply with 2  * ${currElement} is --> ${currElement *2}`;
+ return currElement *2;
+});
+console.log(store); // modify  or new array.
+console.log(numbers); // old array.
+// output  [ 2, 4, 6, 8, 10 ]
+//         [ 1, 2, 3, 4, 5 ]
+-----------------------------------------------------------------------------------------------
+
+
