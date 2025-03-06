@@ -1,0 +1,38 @@
+ Understand about Searching in an Array.
+ ------>
+
+ For Search we have - indexOf, lastIndexOf & includes
+
+ 1: indexOf Method: The indexOf method returns the first index at which a given element can be found in the array, or -1 if it is not present.
+ // syntax
+ indexOf(searchElement);
+ indexOf(searchElement, fromIndex);
+
+ 2: lastIndexOf Method: The lastIndexOf() method of Array instances returns the last index at which a given element can be found in the array, or -1 if it is not present. The array is searched backwards, starting at fromIndex.
+
+ 3: The includes method checks whether an array includes a certain element, returning true or    false.
+ Syntax
+ // includes(searchElement)
+ // includes(searchElement, fromIndex)
+
+ code:------------------------------------------------------------
+ //  Searching in an Array - indexof , include, lastindexof...
+
+// indexof
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log(numbers.indexOf(4));
+console.log(numbers.indexOf(4,5)); // 5 telling search start from index number 5.
+
+// lastindexof
+
+const number=[1,2,3,6,4,5,6,7,8,9];
+console.log(number.indexOf(6));            // output 3 
+console.log(number.lastIndexOf(6));        // output 6 
+console.log(number.lastIndexOf(6,8));     // output  6
+
+// include 
+const number2=[1,2,3,6,4,5,6,7,8,9];
+console.log(number2.includes(6));  // output true
+---------------------------------------------------------------------------------------------------------------------------------------------
+
