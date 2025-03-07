@@ -1,0 +1,18 @@
+// Practise question  unique element with using filter.
+----->
+code------------------------------------------------------------------------------------------------------------
+// Filter unique value..................
+const numbers = [1, 2, 3, 4, 6, 5, 6, 7, 8, 9];
+let uniqueValue = numbers.filter((currElem,index,arr) => {
+         //   console.log(index);
+        //    console.log(arr.indexOf(currElem));  // output 0 1 2 3 4 5 4 7 8 9 here it is telling index....
+            return arr.indexOf(currElem) === index;
+});
+console.log(uniqueValue);  // output  1, 2, 3, 4, 6 ,5, 7, 8, 9
+
+// another way with set method.....................
+
+console.log(new Set(numbers));      // output  Set(9) { 1, 2, 3, 4, 6, 5, 7, 8, 9 }
+// if in array you want so write in bracket....
+console.log([new Set(numbers)]); 
+--------------------------------------------------------------------------------------------------------------------------------------------------
