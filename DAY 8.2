@@ -1,0 +1,47 @@
+//  three practise qquestion ....................................
+
+// Question 1 :- using the map method , write a function that takes an array of string and return a new array 
+// where each string is capitalized. 
+
+ // ans - 1
+  const words =["apple" , "banana", "cherry", "date"];
+  let capStr = words.map((currElem)=>{
+       return currElem.toUpperCase();   // we have toLowerCase also......
+  });
+  console.log(capStr); // output  [ 'APPLE', 'BANANA', 'CHERRY', 'DATE' ]
+
+// Question 2 :-write  a function that takes an array of number and return a new array where each number 
+// is squared but if it is an even number.
+
+// ans-2
+
+const number = [1, 2, 3, 4, 5];
+let result = number.map((currElem) => {
+          if(currElem % 2 === 0 ){
+            return currElem * currElem;
+          }
+        //   else return currElem;    // here we get full array but want only square of 2 and 4 (even number) 
+        //  if not else part so in rest value will undefined will be come.
+}).filter((currElem) => currElem != undefined);
+console.log(result);   //output        [ 4, 16 ]
+
+// Question 3 :- Using map method, write a function that takes an array of names and return a new array where 
+//each name is prefixed with "Mr". 
+
+// Ans - 3  
+
+const names = ["ram", " karan"," arjun"];
+const preFixName = names.map((currElem) => { 
+    return `Mr. ${currElem}`});
+console.log(preFixName);
+// output   [ 'Mr. ram', 'Mr.  karan', 'Mr.  arjun' ] 
+
+
+
+
+
+
+
+
+
+   
