@@ -1,0 +1,28 @@
+ Practice question in filter concept.
+ ---->
+ Practice question
+//  Filtering Products by Price
+// const products = [
+//   { name: "Laptop", price: 1200 },
+//   { name: "Phone", price: 800 },
+//   { name: "Tablet", price: 300 },
+//   { name: "Smartwatch", price: 150 },
+// ];
+// Filter products with a price less than or equal to 500.
+
+code:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+const products = [
+       { name: "Laptop", price: 1200 },   // data is in form of object...(object later we see)
+       { name: "Phone", price: 800 },
+       { name: "Tablet", price: 300 },
+       { name: "Smartwatch", price: 150 },
+];
+const filterProducts = products.filter((currElem)=> {
+     //    console.log(currElem.price <= 500);  // to access object data we use .(dot) opertor.  
+                                              // output came in true or false way.....
+ // because we have used conditional opertor   
+    return currElem.price <= 500;
+});
+console.log(filterProducts);
+// output     [ { name: 'Tablet', price: 300 }, { name: 'Smartwatch', price: 150 } ]
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
