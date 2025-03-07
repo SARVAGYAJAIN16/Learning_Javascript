@@ -1,0 +1,45 @@
+Understand about sort and compare an array.
+---->
+ 
+ Sorting an Array: The sort method sorts the elements of an array in place and returns the sorted array. By default, it sorts elements as strings.
+
+  campare callback function...
+ // syntax:
+  const sortedNumber = number.sort((a,b) => a-b);
+  if(a>b) return 1 => switch the order.
+  if(b>a) return -1 => keep the order.
+
+ callback: A function that is called once for each element in the array.
+ accumulator: The accumulated result of the previous iterations.
+ currentValue: The current element being processed in the array.
+ index (optional): The index of the current element being processed.
+ array (optional): The array reduce was called upon.
+ initialValue (optional): An initial value for the accumulator. If not provided, the first element of the array is used as the initial accumulator value.
+
+ code--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 
+ // sorting of array.......
+const fruits = ["Banana", "Apple", "Orange", "Mango"];
+fruits.sort();
+console.log(fruits);  // output [ 'Apple', 'Banana', 'Mango', 'Orange' ]
+// remember most of the time with numbers we cannot do for large data (numbers) it will wrong.
+
+// compare callback function.....
+  const number = [1,2,3,5,4,7,6,8,9];
+  number.sort((a,b) => {   // for ascending order
+    if(a>b) return 1;
+    if (b>a) return -1;
+  })
+  console.log(number);
+
+// output  1, 2, 3, 4, 5, 6, 7, 8, 9  // sorted
+
+// if want in dereasing order.then change the order.
+number.sort((a,b) => {    // for desending order.
+    if(a>b) return -1;
+    if (b>a) return 1;
+  })
+  console.log(number);
+
+  //output  9, 8, 7, 6, 5, 4, 3, 2, 1
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
