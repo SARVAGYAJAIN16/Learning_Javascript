@@ -1,0 +1,57 @@
+Explore topic filter , find , indIndex method in array with code.
+ ---->
+  Filter in an Array----->
+
+ 1: find Method: The find method is used to find the first element in an array that satisfies a  provided testing function.
+ It returns the first matching element or undefined if no element is  found.
+
+ 2: findIndex Method: The findIndex() method of TypedArray instances returns the index of the first element in a typed array that satisfies the provided testing function.
+ If no elements satisfy the testing function, -1 is returned.
+
+ 3:  filter Method: The filter method creates a new array with all elements that pass the test implemented by the provided function.
+ syntax:
+ filter(callbackFn)
+ filter(callbackFn, thisArg)
+
+ code:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// find method
+const number1=[1,2,3,4,5,4,6,7,8,6,9];
+//const result = number1.find((curElem,index,array) => {  // we want number greater than 5....
+  //        return curElem > 5;
+//}) ;
+//console.log(result);
+// output   6    (our 6 element after 5)
+
+// findIndex
+//const result3 = number1.map((curElem) =>  curElem * 5);  // multiply every number with 5
+//console.log(result3);                        // [
+                                             //     5, 10, 15, 20, 25,
+                                             //    20, 30, 35, 40, 30, 45
+                                            // ]
+//const result2 = result3.findIndex((curElem2)=> {
+//        return curElem2 > 10;
+// });
+// console.log(result2);   // output 2 because 15 index is 2 ....
+
+ // filter method 
+ // const result4= number1.filter((currElem) => {
+ //            return currElem > 6;
+//    });
+//console.log(result4);   // output  [ 7, 8, 9 ] it return all element greater than 6.
+
+// Ex. le'ts say user wants to delete value 6.
+ let value = 6;
+ const numbers = [1, 2, 3, 4, 6, 5, 6, 7, 8, 9];
+ let updateCart = numbers.filter((currElem) => {
+        return currElem !== value;
+ } );
+ console.log(updateCart);
+ // output  [
+ //         1, 2, 3, 4,
+ //         5, 7, 8, 9
+ //         ]
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
