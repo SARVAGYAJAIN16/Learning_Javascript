@@ -1,0 +1,37 @@
+  Important Array Methods....Map(), Filter(), Reduce(),  Reduce method..... and practice question .
+  ------>
+--> Map(), Filter(), Reduce(),
+ map() creates a new array from calling a function for every array element.
+ map() does not execute the function for empty elements.
+ map() does not change the original array.
+
+ --> Reduce method
+ The reduce method in JavaScript is used to accumulate or reduce an array to a single value. It  iterates over the elements of an array and applies a callback function to each element, updating an accumulator value with the result. The reduce method takes a callback function as its first argument and an optional initial value for the accumulator as the second argument.
+// ex total value in cart or avg value in cart like that……..
+// syntax
+  array.reduce(function callback(accumulator, currentValue, index, array) {
+  // Your logic here
+   Return the updated accumulator value
+ }, initialValue);
+-----------------------------------------------------------------------------------------
+--------------------------Practise ques on map ---------------------------------------------------------------------------------------------------------------------------------------
+ // Using map to square each number and create a new array.
+
+const numbers = [1, 2, 3, 4, 5];
+let squaNumber = numbers.map((currElem) => {
+      return currElem * currElem;
+});
+console.log(squaNumber);
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+code:- 
+
+// question  on  Array reduce.....
+// Write a javascript function that calculates the total price of items in a shopping cart. The function should 
+// take an array of items prices as input and return the total prices.
+
+const productPrice = [100, 200, 300, 400, 500];
+let totalPrice = productPrice.reduce((accum , currElem) => {
+         return accum + currElem;
+},0);      //  initial value  we have to give  so here accum value is 0...
+console.log(totalPrice);
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
