@@ -1,0 +1,59 @@
+Explore the topic about string search method ..  indexOf , lastIndexOf , search ... (part 1)
+ 2: String Search Methods
+ a:  indexOf(): The indexOf() method returns the index (position) of the first occurrence   of a string in a string, or it returns -1 if the string is not found:
+// syntax
+// indexOf(searchString)
+// indexOf(searchString, position)
+code:---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// 1 --> indexOf()
+let text = "sarvagya jain"; 
+console.log(text.indexOf("jain"));  // output 9
+console.log(text.indexOf("Jain"));  // output -1  // case sensatitive
+let strArr = Array.from(text);   // Array.from is a method 
+//console.log(strArr);
+// output:-         's', 'a', 'r', 'v',
+ //                 'a', 'g', 'y', 'a',
+ //                 ' ', 'j', 'a', 'i',
+ //                 'n'
+
+let strMap = strArr.map((currElem , index) => { 
+      return `${currElem} -  ${index}`;
+});
+console.log(strMap);    // we are doing that writing index number with indivival charachter.
+
+// The indexOf() method is case sensitive.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 2   lastIndexOf()
+
+b: lastIndexOf() : The lastIndexOf() method returns the index of the last occurrence of a specified text in a string:
+// syntax
+// lastIndexOf(searchString)
+// lastIndexOf(searchString, position)
+code:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+let text1 = " Hii this is a super learning of javascript super easy ";
+let index = text1.indexOf("super");        // it will give first 's' index..  // it do forward search...
+let index2 = text1.lastIndexOf("super", 23);   // it will give last 's' index.. // it will give backward search.. // from 233 it will start
+console.log(index);
+console.log(index2); 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+3 ----> c:  search(): The search() method searches a string for a string (or a regular expression) and returns the position of the match.
+//* Returns the index number where the first match is found. Returns -1 if no match is found.
+code:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+let text2 =  " Hii this is a super learning of javascript super easy ";
+// search is also a case sensatitive ....................
+//let result = text2.search("javascript");
+//console.log(result);  // output 33
+
+//  A regular expression (regex for short) allow developers to match strings against
+//  a pattern, extract submatch information, or simply test if the string conforms to that pattern.
+//let result = text2.search(/javascript/);  // --> regex
+//console.log(result); // output 33 
+// we know search is case - sensitive .... but we dont want for that we have...
+
+let result = text2.search(/javaScript/i); // 'i' flag it represent case sensitivity.......
+console.log(result); // output 33 here S is capital (not matching with text but then with use of i flag it 
+                     //return  string  whether it is capital or small).
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
