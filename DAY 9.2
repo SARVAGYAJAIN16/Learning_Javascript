@@ -1,0 +1,47 @@
+Explore about matchAll() method and includes method.... part-2.
+---->
+  // 5 --> matchAll() :
+ let text2  = "Hii this is a super learning of javascript super easy javascript";
+ let result = text2.matchAll("javascript");
+//console.log(result);  // output       Object [RegExp String Iterator] {}
+
+//todo  here the js converts the normal text into regular expression text.match(/JavaScript/g);
+//  also adds the g flag at the end.
+// The triple dots are known as the spread operator, which takes an iterable(array, string, or object) and 
+// expands the iterable to individual values. The spread operator is useful as it reduces the amount of code
+//  to be written and increases its readability. 
+//console.log(...result);
+// output :- [
+//  'javascript',   // 1 element
+//  index: 32,      // 2 element
+//  input: 'Hii this is a super learning of javascript super easy javascript', // 3 element
+//  groups: undefined   // 4 element and so on ...
+//] [
+//  'javascript',
+//  index: 54,
+//  input: 'Hii this is a super learning of javascript super easy javascript',
+//  groups: undefined
+//]
+// OR same this we can do with for loop.
+//for(let items of result){
+//    console.log(items); // same output as above..
+//}
+// to access above first element (it is array (in output)).......then how ?
+// we already study
+for(items of result){
+    console.log(items[0]);    // output  javascript
+                              //         javascript
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// includes method:
+// includes(): Return true if the string contain the specified value,and false otherwise.
+let text3 = "javascript is easy to learn and javascript is vast";
+console.log(text3.includes("java")); // output true. // these all are case sensitive.
+console.log(text3.includes("Java")); // output false.
+// regular expression cannot be used in include method.
+// single word can also be search and it will find so return true otherwise false.
+
+
+
+
+
