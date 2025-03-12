@@ -1,0 +1,29 @@
+Explore some useful method in javascript.
+---->
+1  toUpperCase and toLowerCase: Converts the string to uppercase or lowercase.
+//  const str = "JavaScript";
+// console.log(str.toUpperCase()); // Outputs: JAVASCRIPT
+// console.log(str.toLowerCase()); // Outputs: javascript
+------------------------------------------------------------
+2  trim: Removes whitespace from both ends of the string. (it don’t removes space in between)
+  (While working on the form we have message section  when user give space in starting and ending  we don’t want to see spaces  so we use trim .
+
+const str = "   Hello, World!   ";
+// console.log(str.length);  // 19
+
+// let trimStr = str.trim();
+// console.log(trimStr);      // Hello, World!
+// console.log(trimStr.length);  // 13
+------------------------------------------------------------------
+3 split: Splits the string into an array of substrings based on a specified delimiter.
+// split()
+ let store ="apple,orange,banana";
+ let result5 = store.split(",");
+ console.log(result5); // output [ 'apple', 'orange', 'banana' ]
+ // here we have reverse method in split()
+ let result6 = store.split(",").reverse();
+ console.log(result6); // output   [ 'banana', 'orange', 'apple' ]
+ // here above we convert in string into array... now want back array into string.......
+ let result7 = store.split(",").reverse().join();
+ console.log(result7); // output  banana,orange,apple
+ ---------------------------------------------------------------------
