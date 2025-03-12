@@ -1,0 +1,52 @@
+ Explore about Extracting String Parts:
+-------------->
+ 1->  slice method
+
+ String.prototype.substr() it is deprecated  ❌
+
+  slice() extracts a part of a string and returns the extracted part in a new string.
+// syntax
+// slice(start, end);
+
+ JavaScript counts positions from zero.
+ First position is 0. Second position is 1.
+
+ 2 -> substring()
+
+ substring: Extracts a portion of the string based on starting and ending indices.
+//* camelCase is used to separate words, substring is not to be intended as Sub String but as Substring
+// syntax
+// substring(indexStart) // index starts with 0
+// substring(indexStart, indexEnd)
+
+ substring() is similar to slice(). The difference is that start and end values less than 0 are treated as 0 in substring().
+
+ code:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ // 1-> slice method()
+//let text = "hii this is a javascript learning course. javascript have wide application";
+//let result = text.slice(6);
+//console.log(result); // it start from 6 index till last.
+//let result2 = text.slice(6,15); // start from 6 and end on 15 but it show till 14 index only
+//console.log(result2);
+
+// 2-> substring()
+let text2 = "hii this is a javascript learning course. javascript have wide application";
+let result3 = text2.substring(6);
+console.log(result3);
+let result4 = text2.substring(-6);
+console.log(result4);
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
