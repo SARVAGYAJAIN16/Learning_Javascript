@@ -1,0 +1,34 @@
+Explore about the  Extracting String Characters.
+--->
+ Extracting String Characters
+ There are 3 methods for extracting string characters:
+
+ 1 The charAt(position) Method
+ 2 The charCodeAt(position) Method
+ 3 The at(position) Method
+
+ charAT() : The charAt() method returns the character at a specified index (position) in a string.
+
+ charCodeAt() : The charCodeAt() method returns the code of the character at a specified index in a string. The method returns a UTF-16 code (an integer between 0 and 65535).
+
+ ES2022 introduced the string method at():  (here we can we can give negative number also)
+ at() method returns the character at a specified index (position) in a string. The at() method returns the same as charAt().
+
+ code:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ // 1 :- charAt() -->it tells  character index....
+let text = "Hello JavaScript, welcome to our world best JavaScript course";
+let result= text.charAt(6);
+console.log(result);
+
+//  2 :- charCodeAt() 
+let result2 = text.charCodeAt(6);
+ console.log(result2); //  output 74    (j value is 74)
+
+ // 3 :- at() 
+ let result3 = text.at(6);
+ console.log(result3); // output j
+ let result4 = text.at(-6);
+ console.log(result4); // output   c
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
