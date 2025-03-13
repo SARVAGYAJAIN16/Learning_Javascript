@@ -1,0 +1,49 @@
+ 3 Practice question  -->
+//1: Write a JavaScript function that prints the letters 'a' through 'z' in the console.
+//  You should use a loop to iterate through the letters and print each one on a new line.
+//code:--
+console.log("a".charCodeAt(0));  // 97 
+console.log("z".charCodeAt(0));  // 122
+console.log(String.fromCharCode(122)); // z   //it convert number into characters.
+
+ for(let char = 97; char <= 122; char++)
+ {
+     console.log(String.fromCharCode(char)); //output a to z it will print.
+ }
+--------------------------------------------------------------------------
+
+ // 2 --> Write a function to count the number of vowels in a string?
+ const vowelsFun = (str) => {
+    const vowels = "aeiou";
+    let count = 0; // let because it can update.
+    for(let char of str)
+    {
+      // console.log(char);  // output whole string will come...
+      if(vowels.includes(char))
+      {
+        count++;
+      }
+    }
+    return count;
+ }
+ console.log(vowelsFun("hello world"));
+
+---------------------------------------------------------------------------------
+ // 3 --> 3: Write a function to check if all the vowels presents in a string or not?
+  const presentOrNot = (str) => {  // we made a function...
+    const vowels = "aeiou";
+    for(let char of vowels)
+    {
+      //  console.log(str.includes(char));
+      if(!str.includes(char)){  // if str.includes(char) is not present then...
+      return false;
+      }
+    }
+    return true;
+  };
+  // console.log(presentOrNot.includes("a")); // true.... // for understanding..
+  console.log(presentOrNot("java it is simple language but vast also"));  // output true....
+----------------------------------------------------------------------------------------------------------
+
+
+ 
