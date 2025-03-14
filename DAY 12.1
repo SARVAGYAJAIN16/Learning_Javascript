@@ -1,0 +1,55 @@
+Explore about math object in javascript.
+--->
+ Math: The Math namespace object contains static properties and methods for mathematical constants and functions.
+ Math works with the Number type. It doesn't work with BigInt.
+
+ 1: Constants:
+  Math.PI: Represents the mathematical constant Pi (π).
+ const piValue = Math.PI;
+ console.log(piValue);
+
+ 2. Basic Operations:
+
+ 1  Math.abs(): The Math.abs() static method returns the absolute value of a number.
+ or in simple, how far the number is from 0. It will be always positive
+
+ 2  Math.round(x): Rounds a number to the nearest integer.
+
+ 3 Math.ceil(x): Returns the value of x rounded up to its nearest integer:
+
+ 4 Math.floor(x): Returns the value of x rounded down to its nearest integer.
+
+ 5 Math.trunc(x): Returns the integer part of x:
+
+code:----------------------------------------------------------------------------
+// 1  Math.PI 
+const pivalue = Math.PI;
+console.log(pivalue);
+//2  Math.abs()
+console.log(Math.abs(25)); // output 25
+console.log(Math.abs(-21)); // output 21
+
+// 3 Math.round()
+const roundValue = Math.round(4.7);
+console.log(roundValue); // output 5
+
+// 4 Math.ceil()
+const ceilValue = Math.ceil(4.7);
+console.log(ceilValue); // output 5
+
+// 5 Math.floor()
+const floorValue = Math.floor(4.7);
+console.log(floorValue); // output 4
+
+//6 Math.trunc()
+const truncValue = Math.trunc(3.4);
+console.log(truncValue); // output 3  it return the integer part only 
+// it is similar to floor in but in posititve value only....
+
+// differnce between trunc and floor
+const newTrunc = Math.trunc(-3.4);
+const newFloor = Math.floor(-3.4);
+console.log(newTrunc);  // output -3
+console.log(newFloor);  // output -4 // -4 or -3 which is smaller... so -4
+
+-----------------------------------------------------------------------------------------------------
