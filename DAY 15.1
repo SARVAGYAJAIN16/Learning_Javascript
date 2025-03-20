@@ -1,0 +1,126 @@
+Explore about DOM filtering and DOM seraching in javascript.
+ DOM Filtering
+
+ childNodes / children:
+ Get a NodeList or HTMLCollection and filter based on your criteria.
+
+ Filtering Siblings:
+ nextSibling / nextElementSibling
+ previousSibling / previousElementSibling
+
+ closest(selector):
+ Find the closest ancestor that matches a given selector.
+ The closest(selector) method is used to find the closest ancestor of an element that matches a specified CSS selector. This method traverses up the DOM tree, starting from the current element, and returns the first ancestor that matches the provided selector. If no matching ancestor is found, it returns null.
+
+
+ DOM Searching
+
+ getElementById(id): Find an element by its ID.
+
+ getElementsByClassName(className): Find elements with a specific class name.
+
+ getElementsByTagName(tagName): Find elements with a specific tag name.
+
+ querySelector(selector): Find the first element that matches the specified CSS selector.
+
+ querySelectorAll(selector): Find all elements that match the specified CSS selector.
+
+
+Searching:
+
+ By ID, Class, and Tag: 
+getElementById(id) 
+getElementsByClassName(className)
+getElementsByTagName(tagName) 
+querySelector(selector)
+querySelectorAll(selector) -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body,
+      button,
+      input {
+        font-family: "Urbanist", sans-serif;
+      }
+    </style>
+  </head>
+  <!-- it's a comment node  -->
+  <body>
+    <div>
+      <h1 id="heading">DOM API</h1>
+      <ul class="list-of--nodes">
+        <li>1 node</li>
+        <li>2 node</li>
+        <li>3 node</li>
+        <!-- <li>4th node </li> -->
+        <li>4 node</li>
+        <li style="display: none">5 node</li>
+      </ul>
+    </div>
+    <div>
+      <h1>DOM API 2</h1>
+      <input type="text" />
+      <button>click me</button>
+      <div class="value"></div>
+    </div>
+    <script>
+      let findElementById = document.getElementById("heading");
+      // let findElementById = document.getElementById("#heading"); ❌    // already using id by   above line so no need to write # ( we write # for accessing id)
+      const findElementByClassName =
+        document.getElementsByClassName("list-of--nodes");
+
+      // console.log(...findElementByClassName);
+               Or (any one) output will be same.
+      // for (let elem of findElementByClassName) {
+      //   console.log(elem.innerHTML);
+      //   console.log(elem.innerText);
+          Output:-  1node
+                           2node
+                           3node
+                           4node   // remember we have 5node also but it display type is none.so not                      visible.
+
+      //   console.log(elem.textContent); 
+            Output:- 1node
+                           2node
+                           3node
+                          // space here because of comment in code.
+                           4node   
+                           5node
+  
+      // }
+
+      // console.log(findElementById.innerHTML);
+      // console.log(findElementById.innerText);
+      // console.log(findElementById.textContent);
+
+       The `innerHTML` property returns the complete content, including all HTML tags, inside the `ul` elements and their text content.
+
+       Example using `innerText`: Prints text as it appears on screen, considering styling and excluding hidden text.
+
+      Example using `textContent`: Prints text as it is in the markup, including hidden text and without considering styling.
+
+      // const getElementsByTagName = document.getElementsByTagName("li");
+      // // console.log(getElementsByTagName);
+      // // console.log(...getElementsByTagName);
+      // for (let name of getElementsByTagName) {
+      //   console.log(name);
+      // }
+      // const findElementByQuerySelector = document.querySelector("#heading");
+      // console.log(findElementByQuerySelector); // output DOM API ( in querySelector use # to use id.)  
+      //   (findElementByQuerySelector.innerText = "World Best JS Course") // output instead of DOM API we will get World best JS Course.
+      // );
+
+      const findElementByQuerySelectorAll = document.querySelectorAll("li"); // if we not use All so only one li will be printed , for to be printed all li so we use All…..
+      console.log(findElementByQuerySelectorAll);
+      findElementByQuerySelectorAll.forEach((curElem) => console.log(curElem)); // for data , loop chalna hi hoga…..
+    </script>
+  </body>
+</html>
