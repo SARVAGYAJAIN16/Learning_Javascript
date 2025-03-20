@@ -1,0 +1,62 @@
+Mini_project on todo App 
+code:---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Simple DOM ToDo App</h1>
+        <input type ="text" id="inputfield">
+        <button class="btn"> click me </button>
+        <div class=" todoListElement">
+
+        </div>
+        <p id ="todoFirst"></p>
+    </div>
+    <script>
+        // to search or find element or get 
+        let inputElem = document.getElementById("inputfield");
+       // console.log(inputElem);
+        // now we want that user type anything and we get that particular data. so we use event.
+        let clickbtn = document.querySelector(".btn"); // . (dot) because we are accessing class.
+       // console.log(clickbtn);
+      // let todoFirst = document.getElementById("todoFirst");
+
+      let todoElem = document.querySelector(".todoListElement");
+       const addTodo = () => {
+         console.log(inputElem.value) // value attribute we use. in html
+       //  todoFirst.textContent = inputElem.value;  // output type apple so apple also came written in that screen
+         // then we write mango so mango will replace apple. that the problem..
+         // so we will create and then append that child so do comment above code...
+
+         // on every click new paragraph will be added
+         let pElem = document.createElement("p");
+         pElem.textContent = inputElem.value;
+         console.log(pElem);
+         // appending 
+         todoElem.append(pElem);
+         inputElem.value = ""; // by this in typing previous value will not come.(here we have done null)
+
+         // now if we want to remove any particular element then...
+
+       };
+        clickbtn.addEventListener('click',() =>{  // konsa event karana ha so click and then function call karwana ha
+        addTodo();
+        });    // output if we write in serach box apple so in console we get apple // so like this 
+                                                                                   //  we will get data.
+
+         // removing element...
+         todoElem.addEventListener("click", (event) => {
+            console.log(event.target);// by clicking on screen(for particular element)
+            //  we get that element  in console.
+// it is event deligation (study later)...
+            let currElem = event.target;
+            currElem.remove(); // so on clicking particular element it will remove from screen.
+         });                                                                          
+    </script>
+</body>
+</html>
